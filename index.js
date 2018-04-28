@@ -27,4 +27,13 @@ client.query(q.CreateKey(
             "hashed_secret": "$2a$05$k9x7YbL5CYY9KIMhW6RaIOILyEwY3IHuX0NWvK9iUMWk8TJ7k1H8O"
         })
     })
-    
+
+client.query(q.CreateClass({ name: "posts" })).then(() => {
+    return ({
+        "ref": { "@ref": "classes/posts" },
+        "class": { "@ref": "classes" },
+        "ts": 1520225686488810,
+        "history_days": 30,
+        "name": "posts"
+    })
+})
